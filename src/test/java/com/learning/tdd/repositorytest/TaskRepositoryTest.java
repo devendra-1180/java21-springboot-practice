@@ -1,7 +1,7 @@
-package com.learning.records.repositorytest;
+package com.learning.tdd.repositorytest;
 
-import com.learning.records.model.Task;
-import com.learning.records.repository.TaskRepository;
+import com.learning.tdd.model.Task;
+import com.learning.tdd.repository.TaskRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

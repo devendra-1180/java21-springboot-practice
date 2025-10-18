@@ -1,27 +1,30 @@
-package com.learning.records.model;
+package com.learning.tdd.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @Version
-    private Integer version;
     String title;
     String status;
-
+    @Version
+    private Integer version;
 
     public  Task(String title, String status) {
         this.title = title;
         this.status = status;
     }
+    public Task(Long id, String title, String status) {
+        this.id = id;
+        this.title = title;
+        this.status = status;
+    }
+
 
 }

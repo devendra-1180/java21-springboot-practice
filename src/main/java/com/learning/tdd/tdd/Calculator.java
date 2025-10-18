@@ -1,4 +1,4 @@
-package com.learning.records.tdd;
+package com.learning.tdd.tdd;
 
 public class Calculator {
     public int add(int a, int b) {

@@ -1,4 +1,4 @@
-package com.learning.records.tdd;
+package com.learning.tdd.tdd;
 
 import org.junit.jupiter.api.Test;
 

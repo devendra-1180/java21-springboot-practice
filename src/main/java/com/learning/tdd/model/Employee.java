@@ -1,4 +1,4 @@
-package com.learning.records.model;
+package com.learning.tdd.model;
 
 public record Employee(int id, String name, int age) {
 
