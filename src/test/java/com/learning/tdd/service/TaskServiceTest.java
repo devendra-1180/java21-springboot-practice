@@ -67,6 +67,21 @@ public class TaskServiceTest {
         verify(taskRepository, times(1)).findById(1L);
     }
 
+    @Test
+    void testCreateTask() throws Exception {
+        //arrange
+        Task task = new Task("Save New Task", "In Progress");
+        when(taskRepository.save(any(Task.class))).thenReturn(task);
+
+        //act
+        Task savedTask = taskService.saveTask(task);
+
+        //assert
+        assertNotNull(savedTask);
+        assertEquals(task.getTitle(), savedTask.getTitle());
+        verify(taskRepository, times(1)).save(any(Task.class));
+    }
+
 
     @Test
     void testUpdateTask(){

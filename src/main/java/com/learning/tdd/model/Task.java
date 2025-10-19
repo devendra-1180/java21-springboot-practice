@@ -1,6 +1,7 @@
 package com.learning.tdd.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +12,10 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    @NotEmpty
     String title;
+
     String status;
     @Version
     private Integer version;
